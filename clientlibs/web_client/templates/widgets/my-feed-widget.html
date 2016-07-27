@@ -1,0 +1,22 @@
+<div class="item"><h3>My Feed</h3></div>
+
+
+<div class="list">
+
+    <div class="item" ng-if="feed.length <= 0">
+      <h3>Your feed is empty.  Go to the <a ui-sref="community">Community</a> page to follow someone.  Don't be shy!</h3>
+    </div>
+
+
+    <a ng-if="feed.length >= 1"class="item item-avatar item-button-right" ui-sref="person({user_name:f.user_name})" ng-repeat="f in feed"> 
+      <img src="/clientlibs/img/avatar.png">
+      <h2>{{f.user_name}}</h2>
+      <p>{{f.tweet}}</p>
+      <p>{{f.date_created}}</p>
+      <button class="button button-stable">
+      		<span ng-show="f.following">Following</span>
+		    <span ng-hide="f.following">Not Following</span>
+	   </button>
+    </a>
+
+</div>

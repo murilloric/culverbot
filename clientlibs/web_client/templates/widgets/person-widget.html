@@ -1,0 +1,22 @@
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="/clientlibs/img/avatar.png">
+    <h2>{{person.user_name}}</h2>
+    <button class="button button-small button-dark" ng-click="FollowPerson()">
+    	<span ng-show="person.following">unFollow</span>
+    	<span ng-hide="person.following">Follow</span>
+    </button>
+  </div>
+
+  <div class="item item-body">
+    
+    <div class="item" href="#" ng-repeat="t in person.tweets">
+      <h2>{{t.date_created}}</h2>
+      <p>{{t.tweet}}</p>
+    </div>
+
+
+  </div>
+
+</div>

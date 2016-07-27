@@ -1,0 +1,24 @@
+application: culverbot
+version: 1
+runtime: python27
+threadsafe: true
+api_version: 1
+
+
+handlers:
+# Endpoints handler
+- url: /clientlibs
+  static_dir: clientlibs
+
+- url: /app
+  static_files: views/web_client/index.html
+  upload: views/web_client/index\.html
+
+- url: .*
+  script: main.app
+  secure: always
+
+
+libraries:
+- name: webapp2
+  version: "latest"

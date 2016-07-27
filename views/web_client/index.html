@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="masterapp">
+<head>
+    <title>Hello welcome to the webclient</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" type="text/css" href="/clientlibs/web_client/dep/ionic-v1.2.0/css/ionic.min.css">
+    <script type="text/javascript" src="/clientlibs/web_client/dep/ionic-v1.2.0/js/ionic.bundle.min.js"></script>
+    <script type="text/javascript" src="/clientlibs/web_client/dep/ionic-v1.2.0/js/angular/angular-cookies.min.js"></script>
+    <style type="text/css">
+    
+        .pane{
+            background-color: #f9f9f9;
+            color:#fff;
+        }
+
+        .item{
+            background-color: #f7f7f7;
+            border-color: #444;
+        }
+
+        .item-select select{
+            background-color: #f9f9f9;
+        }
+
+        a.item{
+            color:#444;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--TOP NAV-->
+    <ion-nav-bar class="bar bar-header bar-dark" align-title="center" ng-controller="navCtrl">
+      	<!-- <ion-nav-back-button class="button-clear">
+        	<i class="icon ion-arrow-left-c"></i>
+    	</ion-nav-back-button> -->
+       <ion-nav-buttons>
+       <!-- Toggle left side menu -->
+       <button class="button button-icon icon ion-navicon" ng-click="toggleLeftSideMenu();"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-side-menus is-enabled="true">
+        <!-- Left menu -->
+        <ion-side-menu side="left" expose-aside-when="large">
+        
+        <ion-list>
+            <div class="item item-divider" style="padding-top:35px;">
+            </div>
+            <ion-item ui-sref="home">
+                Create Tweet
+            </ion-item>
+            <ion-item ui-sref="mytweets">
+                My Tweets
+            </ion-item>
+            <ion-item ui-sref="myfeed">
+                My Feed
+            </ion-item>
+            <ion-item ui-sref="community">
+                Community
+            </ion-item>
+        </ion-list>
+        </ion-side-menu>
+
+        <ion-side-menu-content>
+
+            <!--MAIN VIEW-->
+            <ion-nav-view></ion-nav-view>
+
+        </ion-side-menu-content>
+
+
+    </ion-side-menus>
+
+    <!-- <script type="text/javascript" src="/clientlibs/web_client/min/culverbox.min.js"></script> -->
+
+	<script type="text/javascript" src="/clientlibs/web_client/js/app.js"></script>
+	<script type="text/javascript" src="/clientlibs/web_client/js/services.js"></script>
+	<script type="text/javascript" src="/clientlibs/web_client/js/directives.js"></script>
+	<script type="text/javascript" src="/clientlibs/web_client/js/controller.js"></script>
+</body>
+
+</html>

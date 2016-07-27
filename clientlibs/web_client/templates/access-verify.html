@@ -1,0 +1,17 @@
+<ion-view cache-view="false" title="Request Access">
+    <ion-content padding="true">
+        <!-- Login Form -->
+	    <div class="item">
+	        	<h2>Welcome to CulverBot App</h2>
+	        	<p>Check for a text message with an access token</p>
+
+				<label class="item item-input">
+					<span class="input-label">Access Token</span>
+					<input type="text" placeholder="0000000" ng-model="user_data.access_token">
+				</label>
+				<button class="button button-full button-dark" ng-click="sendVerification();">Send Request</button>
+		
+	    </div>
+	    <!-- End Login Form -->
+    </ion-content>
+  </ion-view>
