@@ -1,6 +1,6 @@
 # HEADSPACE TWEET CODE CHALLENGE
 
- - how to is a coupled web app.  The back-end is using the Google Cloud Platform.  
+ - This is a coupled web app.  The back-end is using the Google Cloud Platform and the fornt-end is Angular / Ionic 
 
 
 ### How to run on localhost 
