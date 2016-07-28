@@ -1,6 +1,6 @@
 # ABOUT CULVERBOT
 
- - This is a coupled web app.  The back-end is using the Google Cloud Platform and the fornt-end is Angular / Ionic 
+ - This is a coupled web app (front-end and back-end on same server).  The back-end is written in Python on the Webapp2 framework. The front-end is written in Javascript es5 on AngularJS v1.4.3 && Ionic, v1.2.0 framework.
 
 
 ### How to run on localhost 
