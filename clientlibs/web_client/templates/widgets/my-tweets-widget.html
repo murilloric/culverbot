@@ -1,8 +1,11 @@
-<div class="item"><h3>My Tweets</h3></div>
+<div class="item item-positive"><h3>My Messages</h3></div>
 
 <div class="list">
+	<div class="item" ng-if="my_tweets.length <=0">
+      <h3 class="calm">Don't be shy! Post a message to the community.</h3>
+    </div>
 
-    <a class="item item-avatar" href="#" ng-repeat="t in my_tweets">
+    <a class="item item-avatar" ui-sref="person({user_name:user.user_name})" ng-repeat="t in my_tweets">
       <img src="/clientlibs/img/avatar.png">
       <h2>{{t.date_created}}</h2>
       <p>{{t.tweet}}</p>

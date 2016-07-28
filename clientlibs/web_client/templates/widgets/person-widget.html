@@ -1,9 +1,10 @@
-<div class="list card">
+ <div class="item item-positive"><h3>Person</h3></div>
+<!-- <div class="list card"> -->
 
-  <div class="item item-avatar">
+  <div class="item item-thumbnail-left item-button-right item-light">
     <img src="/clientlibs/img/avatar.png">
-    <h2>{{person.user_name}}</h2>
-    <button class="button button-small button-dark" ng-click="FollowPerson()">
+    <h1>{{person.user_name}}</h1>
+    <button class="button button-small button-stable" ng-click="FollowPerson()">
     	<span ng-show="person.following">unFollow</span>
     	<span ng-hide="person.following">Follow</span>
     </button>
@@ -11,12 +12,13 @@
 
   <div class="item item-body">
     
-    <div class="item" href="#" ng-repeat="t in person.tweets">
+    <div ng-repeat="t in person.tweets">
       <h2>{{t.date_created}}</h2>
       <p>{{t.tweet}}</p>
+      <hr/>
     </div>
 
 
   </div>
-
-</div>
+<!-- 
+</div> -->
